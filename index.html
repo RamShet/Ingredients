@@ -14,7 +14,7 @@
     <script>
         function searchIngredient() {
             const searchInput = document.getElementById('searchInput').value.toLowerCase();
-            fetch('https://docs.google.com/spreadsheets/d/e/2PACX-1vTn_T5ZBA2dDmfU5Ems-qYZtPg2BP2Jwq5XJhD5ZU8OlhOOpEbMGlLYIBL8Y-IB2IPlmPOUY-peHHN1/pubhtml')
+            fetch('https://docs.google.com/spreadsheets/d/e/2PACX-1vTn_T5ZBA2dDmfU5Ems-qYZtPg2BP2Jwq5XJhD5ZU8OlhOOpEbMGlLYIBL8Y-IB2IPlmPOUY-peHHN1//gviz/tq?tqx=out:json')
                 .then(response => response.json())
                 .then(data => {
                     const entries = data.feed.entry;
