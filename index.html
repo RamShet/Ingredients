@@ -1,678 +1,484 @@
-[
-    {
-        "ingredient_name": "Turmeric",
-        "pros": "Anti-inflammatory properties, boosts immunity, aids digestion.",
-        "cons": "Excessive consumption can cause stomach upset, risk of kidney stones.",
-        "nutritional_information": {
-            "calories": 354,
-            "protein": 7.8g,
-            "fat": 9.9g,
-            "carbohydrates": 64.9g,
-            "fiber": 21g,
-            "sugars": 3.2g
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Ingredients</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
         }
-    },
-    {
-        "ingredient_name": "Ginger",
-        "pros": "Aids digestion, reduces nausea, anti-inflammatory.",
-        "cons": "Can cause heartburn, diarrhea, and stomach discomfort in large quantities.",
-        "nutritional_information": {
-            "calories": 80,
-            "protein": 1.8g,
-            "fat": 0.8g,
-            "carbohydrates": 17.8g,
-            "fiber": 2g,
-            "sugars": 1.7g
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #ddd;
         }
-    },
-    {
-        "ingredient_name": "Cumin",
-        "pros": "Improves digestion, boosts immunity, good source of iron.",
-        "cons": "Excessive intake can cause liver damage, can lower blood sugar levels.",
-        "nutritional_information": {
-            "calories": 375,
-            "protein": 17.8g,
-            "fat": 22.3g,
-            "carbohydrates": 44.2g,
-            "fiber": 10.5g,
-            "sugars": 2.3g
+        th {
+            background-color: #f2f2f2;
         }
-    },
-    {
-        "ingredient_name": "Mustard Seeds",
-        "pros": "Rich in antioxidants, aids digestion, anti-inflammatory properties.",
-        "cons": "Can cause skin irritation, may affect thyroid function in large amounts.",
-        "nutritional_information": {
-            "calories": 508,
-            "protein": 26.1g,
-            "fat": 36.2g,
-            "carbohydrates": 28.1g,
-            "fiber": 12.2g,
-            "sugars": 6.8g
-        }
-    },
-    {
-        "ingredient_name": "Fenugreek",
-        "pros": "Helps control blood sugar levels, improves digestion, boosts milk production in lactating mothers.",
-        "cons": "Can cause diarrhea, gas, and bloating, may cause allergic reactions.",
-        "nutritional_information": {
-            "calories": 323,
-            "protein": 23g,
-            "fat": 6.4g,
-            "carbohydrates": 58.4g,
-            "fiber": 24.6g,
-            "sugars": 0g
-        }
-    },
-    {
-        "ingredient_name": "Coriander",
-        "pros": "Rich in vitamins and minerals, aids digestion, anti-inflammatory properties.",
-        "cons": "May cause allergic reactions, can cause sunlight sensitivity.",
-        "nutritional_information": {
-            "calories": 23,
-            "protein": 2.1g,
-            "fat": 0.5g,
-            "carbohydrates": 3.7g,
-            "fiber": 2.8g,
-            "sugars": 0.9g
-        }
-    },
-    {
-        "ingredient_name": "Curry Leaves",
-        "pros": "Good source of iron and calcium, aids in digestion, helps in weight loss.",
-        "cons": "May cause liver toxicity in very large amounts.",
-        "nutritional_information": {
-            "calories": 44,
-            "protein": 6g,
-            "fat": 1g,
-            "carbohydrates": 7g,
-            "fiber": 0g,
-            "sugars": 0g
-        }
-    },
-    {
-        "ingredient_name": "Tamarind",
-        "pros": "Rich in antioxidants, aids digestion, helps in weight management.",
-        "cons": "High in sugar, can cause acid reflux.",
-        "nutritional_information": {
-            "calories": 239,
-            "protein": 2.8g,
-            "fat": 0.6g,
-            "carbohydrates": 62.5g,
-            "fiber": 5.1g,
-            "sugars": 57.4g
-        }
-    },
-    {
-        "ingredient_name": "Cardamom",
-        "pros": "Aids digestion, rich in antioxidants, freshens breath.",
-        "cons": "May cause allergic reactions, excessive consumption can lead to gallstones.",
-        "nutritional_information": {
-            "calories": 311,
-            "protein": 10.8g,
-            "fat": 6.7g,
-            "carbohydrates": 68.5g,
-            "fiber": 28g,
-            "sugars": 0g
-        }
-    },
-    {
-        "ingredient_name": "Fennel Seeds",
-        "pros": "Aids digestion, reduces bloating, rich in vitamins and minerals.",
-        "cons": "May cause allergic reactions, can interact with certain medications.",
-        "nutritional_information": {
-            "calories": 345,
-            "protein": 15.8g,
-            "fat": 14.9g,
-            "carbohydrates": 52.3g,
-            "fiber": 39.8g,
-            "sugars": 0g
-        }
-    },
-    {
-        "ingredient_name": "Asafoetida",
-        "pros": "Aids digestion, anti-inflammatory properties, relieves respiratory disorders.",
-        "cons": "Strong odor, can cause diarrhea, and stomach upset in large quantities.",
-        "nutritional_information": {
-            "calories": 297,
-            "protein": 4g,
-            "fat": 1.1g,
-            "carbohydrates": 67.8g,
-            "fiber": 4.1g,
-            "sugars": 0g
-        }
-    },
-    {
-        "ingredient_name": "Saffron",
-        "pros": "Rich in antioxidants, improves mood, boosts memory.",
-        "cons": "Expensive, can cause allergic reactions and toxicity in large amounts.",
-        "nutritional_information": {
-            "calories": 310,
-            "protein": 11g,
-            "fat": 5.9g,
-            "carbohydrates": 65.4g,
-            "fiber": 3.9g,
-            "sugars": 0g
-        }
-    },
-    {
-        "ingredient_name": "Coconut",
-        "pros": "Rich in fiber, vitamins, and minerals, improves digestion, supports immune system.",
-        "cons": "High in saturated fats, can cause allergic reactions.",
-        "nutritional_information": {
-            "calories": 354,
-            "protein": 3.3g,
-            "fat": 33.5g,
-            "carbohydrates": 15.2g,
-            "fiber": 9g,
-            "sugars": 6.2g
-        }
-    },
-    {
-        "ingredient_name": "Jaggery",
-        "pros": "Natural sweetener, rich in minerals, aids digestion.",
-        "cons": "High in calories, can cause blood sugar spikes.",
-        "nutritional_information": {
-            "calories": 383,
-            "protein": 0.4g,
-            "fat": 0.1g,
-            "carbohydrates": 98g,
-            "fiber": 0g,
-            "sugars": 97g
-        }
-    },
-    {
-        "ingredient_name": "Chickpeas",
-        "pros": "High in protein and fiber, supports heart health, helps in weight management.",
-        "cons": "Can cause gas and bloating, may contain anti-nutrients.",
-        "nutritional_information": {
-            "calories": 364,
-            "protein": 19g,
-            "fat": 6g,
-            "carbohydrates": 61g,
-            "fiber": 17g,
-            "sugars": 11g
-        }
-    },
-    {
-        "ingredient_name": "Red Lentils",
-        "pros": "High in protein and fiber, rich in iron and folate, supports heart health.",
-        "cons": "Can cause gas and bloating, may contain anti-nutrients.",
-        "nutritional_information": {
-            "calories": 358,
-            "protein": 25.8g,
-            "fat": 1.1g,
-            "carbohydrates": 60.1g,
-            "fiber": 30.5g,
-            "sugars": 2g
-        }
-    },
-    {
-        "ingredient_name": "Black Gram",
-        "pros": "Rich in protein and fiber, improves digestion, supports heart health.",
-        "cons": "Can cause gas and bloating, may interfere with nutrient absorption.",
-        "nutritional_information": {
-            "calories": 341,
-            "protein": 25.2g,
-            "fat": 1.6g,
-            "carbohydrates": 58.9g,
-            "fiber": 18.3g,
-            "sugars": 1.1g
-        }
-    },
-    {
-        "ingredient_name": "Coconut Oil",
-        "pros": "Contains healthy fats, boosts metabolism, supports skin and hair health.",
-        "cons": "High in saturated fats, excessive consumption can raise cholesterol levels.",
-        "nutritional_information": {
-            "calories": 862,
-            "protein": 0g,
-            "fat": 100g,
-            "carbohydrates": 0g,
-            "fiber": 0g,
-            "sugars": 0g
-        }
-    },
-    {
-        "ingredient_name": "Peanuts",
-        "pros": "High in protein and healthy fats, rich in vitamins and minerals, supports heart health.",
-        "cons": "High in calories, can cause allergic reactions.",
-        "nutritional_information": {
-            "calories": 567,
-            "protein": 25.8g,
-            "fat": 49.2g,
-            "carbohydrates": 16.1g,
-            "fiber": 8.5g,
-            "sugars": 4.7g
-        }
-    },
-    {
-        "ingredient_name": "Ghee",
-        "pros": "Rich in healthy fats, supports digestion, boosts immunity.",
-        "cons": "High in saturated fats, high in calories.",
-        "nutritional_information": {
-            "calories": 900,
-            "protein": 0g,
-            "fat": 100g,
-            "carbohydrates": 0g,
-            "fiber": 0g,
-            "sugars": 0g
-        }
-    },
-    {
-        "ingredient_name": "Paneer",
-        "pros": "High in protein and calcium, supports bone health, aids in weight management.",
-        "cons": "High in calories and fat, can cause lactose intolerance symptoms.",
-        "nutritional_information": {
-            "calories": 265,
-            "protein": 18.3g,
-            "fat": 20.8g,
-            "carbohydrates": 1.2g,
-            "fiber": 0g,
-            "sugars": 0.6g
-        }
-    },
-    {
-        "ingredient_name": "Mango",
-        "pros": "Rich in vitamins A and C, supports eye health, boosts immunity.",
-        "cons": "High in sugar, can cause allergic reactions.",
-        "nutritional_information": {
-            "calories": 60,
-            "protein": 0.8g,
-            "fat": 0.4g,
-            "carbohydrates": 15g,
-            "fiber": 1.6g,
-            "sugars": 13.7g
-        }
-    },
-    {
-        "ingredient_name": "Spinach",
-        "pros": "Rich in iron and vitamins, supports eye health, boosts immunity.",
-        "cons": "Contains oxalates which can interfere with calcium absorption.",
-        "nutritional_information": {
-            "calories": 23,
-            "protein": 2.9g,
-            "fat": 0.4g,
-            "carbohydrates": 3.6g,
-            "fiber": 2.2g,
-            "sugars": 0.4g
-        }
-    },
-    {
-        "ingredient_name": "Green Peas",
-        "pros": "High in protein and fiber, rich in vitamins and minerals, supports heart health.",
-        "cons": "Can cause bloating and gas.",
-        "nutritional_information": {
-            "calories": 81,
-            "protein": 5.4g,
-            "fat": 0.4g,
-            "carbohydrates": 14.5g,
-            "fiber": 5.1g,
-            "sugars": 5.7g
-        }
-    },
-    {
-        "ingredient_name": "Brinjal (Eggplant)",
-        "pros": "Low in calories, rich in antioxidants, supports heart health.",
-        "cons": "Contains solanine which can be toxic in large amounts, may cause allergic reactions.",
-        "nutritional_information": {
-            "calories": 25,
-            "protein": 1g,
-            "fat": 0.2g,
-            "carbohydrates": 5.9g,
-            "fiber": 3g,
-            "sugars": 3.5g
-        }
-    },
-    {
-        "ingredient_name": "Bottle Gourd",
-        "pros": "Low in calories, aids in digestion, supports heart health.",
-        "cons": "Bitter varieties can be toxic.",
-        "nutritional_information": {
-            "calories": 14,
-            "protein": 0.6g,
-            "fat": 0.1g,
-            "carbohydrates": 3.4g,
-            "fiber": 1.2g,
-            "sugars": 1.8g
-        }
-    },
-    {
-        "ingredient_name": "Lady Finger (Okra)",
-        "pros": "Rich in vitamins and minerals, supports digestion, boosts immunity.",
-        "cons": "Can cause digestive issues in large quantities.",
-        "nutritional_information": {
-            "calories": 33,
-            "protein": 2g,
-            "fat": 0.2g,
-            "carbohydrates": 7.5g,
-            "fiber": 3.2g,
-            "sugars": 1.5g
-        }
-    },
-    {
-        "ingredient_name": "Pumpkin",
-        "pros": "Low in calories, rich in vitamins A and C, supports eye health.",
-        "cons": "High in natural sugars.",
-        "nutritional_information": {
-            "calories": 26,
-            "protein": 1g,
-            "fat": 0.1g,
-            "carbohydrates": 6.5g,
-            "fiber": 0.5g,
-            "sugars": 2.8g
-        }
-    },
-    {
-        "ingredient_name": "Cauliflower",
-        "pros": "Low in calories, rich in vitamins and minerals, supports digestion.",
-        "cons": "Can cause bloating and gas.",
-        "nutritional_information": {
-            "calories": 25,
-            "protein": 1.9g,
-            "fat": 0.3g,
-            "carbohydrates": 4.9g,
-            "fiber": 2g,
-            "sugars": 2g
-        }
-    },
-    {
-        "ingredient_name": "Tomato",
-        "pros": "Rich in vitamins A and C, supports heart health, boosts immunity.",
-        "cons": "Can cause acid reflux and heartburn.",
-        "nutritional_information": {
-            "calories": 18,
-            "protein": 0.9g,
-            "fat": 0.2g,
-            "carbohydrates": 3.9g,
-            "fiber": 1.2g,
-            "sugars": 2.6g
-        }
-    },
-    {
-        "ingredient_name": "Green Chili",
-        "pros": "Rich in vitamins A and C, boosts metabolism, supports digestion.",
-        "cons": "Can cause stomach irritation, excessive consumption can lead to digestive issues.",
-        "nutritional_information": {
-            "calories": 40,
-            "protein": 2g,
-            "fat": 0.2g,
-            "carbohydrates": 9g,
-            "fiber": 1.5g,
-            "sugars": 5g
-        }
-    },
-    {
-        "ingredient_name": "Bitter Gourd",
-        "pros": "Low in calories, helps regulate blood sugar levels, supports digestion.",
-        "cons": "Bitter taste, excessive consumption can lead to liver toxicity.",
-        "nutritional_information": {
-            "calories": 17,
-            "protein": 1g,
-            "fat": 0.2g,
-            "carbohydrates": 3.7g,
-            "fiber": 2.8g,
-            "sugars": 1.2g
-        }
-    },
-    {
-        "ingredient_name": "Cabbage",
-        "pros": "Low in calories, rich in vitamins and minerals, supports digestion.",
-        "cons": "Can cause bloating and gas, may interfere with thyroid function.",
-        "nutritional_information": {
-            "calories": 25,
-            "protein": 1.3g,
-            "fat": 0.1g,
-            "carbohydrates": 5.8g,
-            "fiber": 2.5g,
-            "sugars": 3.2g
-        }
-    },
-    {
-        "ingredient_name": "Mushrooms",
-        "pros": "Low in calories, rich in vitamins and minerals, supports immune system.",
-        "cons": "Can cause allergic reactions, some varieties are toxic.",
-        "nutritional_information": {
-            "calories": 22,
-            "protein": 3.1g,
-            "fat": 0.3g,
-            "carbohydrates": 3.3g,
-            "fiber": 1g,
-            "sugars": 1.7g
-        }
-    },
-    {
-        "ingredient_name": "Radish",
-        "pros": "Low in calories, rich in vitamins and minerals, supports digestion.",
-        "cons": "Can cause bloating and gas, may interfere with thyroid function.",
-        "nutritional_information": {
-            "calories": 16,
-            "protein": 0.7g,
-            "fat": 0.1g,
-            "carbohydrates": 3.4g,
-            "fiber": 1.6g,
-            "sugars": 1.9g
-        }
-    },
-    {
-        "ingredient_name": "Beetroot",
-        "pros": "Rich in vitamins and minerals, supports heart health, improves exercise performance.",
-        "cons": "High in natural sugars, can cause beeturia (red urine).",
-        "nutritional_information": {
-            "calories": 43,
-            "protein": 1.6g,
-            "fat": 0.2g,
-            "carbohydrates": 9.6g,
-            "fiber": 2.8g,
-            "sugars": 6.8g
-        }
-    },
-    {
-        "ingredient_name": "Garlic",
-        "pros": "Rich in antioxidants, supports heart health, boosts immunity.",
-        "cons": "Can cause bad breath, stomach upset, and allergic reactions.",
-        "nutritional_information": {
-            "calories": 149,
-            "protein": 6.4g,
-            "fat": 0.5g,
-            "carbohydrates": 33.1g,
-            "fiber": 2.1g,
-            "sugars": 1g
-        }
-    },
-    {
-        "ingredient_name": "Onion",
-        "pros": "Rich in antioxidants, supports heart health, boosts immunity.",
-        "cons": "Can cause bad breath, stomach upset, and allergic reactions.",
-        "nutritional_information": {
-            "calories": 40,
-            "protein": 1.1g,
-            "fat": 0.1g,
-            "carbohydrates": 9.3g,
-            "fiber": 1.7g,
-            "sugars": 4.2g
-        }
-    },
-    {
-        "ingredient_name": "Potato",
-        "pros": "Rich in vitamins and minerals, supports digestion, boosts energy.",
-        "cons": "High in carbohydrates, can cause blood sugar spikes.",
-        "nutritional_information": {
-            "calories": 77,
-            "protein": 2g,
-            "fat": 0.1g,
-            "carbohydrates": 17.6g,
-            "fiber": 2.2g,
-            "sugars": 0.8g
-        }
-    },
-    {
-        "ingredient_name": "Rice",
-        "pros": "Rich in carbohydrates, provides energy, supports heart health.",
-        "cons": "High in carbohydrates, can cause blood sugar spikes, low in fiber.",
-        "nutritional_information": {
-            "calories": 130,
-            "protein": 2.7g,
-            "fat": 0.3g,
-            "carbohydrates": 28.2g,
-            "fiber": 0.4g,
-            "sugars": 0.1g
-        }
-    },
-    {
-        "ingredient_name": "Wheat",
-        "pros": "Rich in fiber, supports digestion, provides energy.",
-        "cons": "Contains gluten, can cause allergies and digestive issues.",
-        "nutritional_information": {
-            "calories": 339,
-            "protein": 13.2g,
-            "fat": 2.5g,
-            "carbohydrates": 71.2g,
-            "fiber": 12.2g,
-            "sugars": 0.4g
-        }
-    },
-    {
-        "ingredient_name": "Quinoa",
-        "pros": "High in protein and fiber, rich in vitamins and minerals, supports heart health.",
-        "cons": "Can cause digestive issues in some people, may contain anti-nutrients.",
-        "nutritional_information": {
-            "calories": 120,
-            "protein": 4.1g,
-            "fat": 1.9g,
-            "carbohydrates": 21.3g,
-            "fiber": 2.8g,
-            "sugars": 0.9g
-        }
-    },
-    {
-        "ingredient_name": "Sorghum",
-        "pros": "Gluten-free, rich in fiber, supports digestion.",
-        "cons": "Can cause digestive issues in large amounts.",
-        "nutritional_information": {
-            "calories": 329,
-            "protein": 11.3g,
-            "fat": 3.3g,
-            "carbohydrates": 72.1g,
-            "fiber": 6.7g,
-            "sugars": 0g
-        }
-    },
-    {
-        "ingredient_name": "Barley",
-        "pros": "Rich in fiber, supports digestion, helps regulate blood sugar levels.",
-        "cons": "Contains gluten, can cause digestive issues.",
-        "nutritional_information": {
-            "calories": 354,
-            "protein": 12.5g,
-            "fat": 2.3g,
-            "carbohydrates": 73.5g,
-            "fiber": 17.3g,
-            "sugars": 0.8g
-        }
-    },
-    {
-        "ingredient_name": "Corn",
-        "pros": "Rich in fiber, vitamins, and minerals, supports digestion, provides energy.",
-        "cons": "High in carbohydrates, can cause blood sugar spikes.",
-        "nutritional_information": {
-            "calories": 86,
-            "protein": 3.2g,
-            "fat": 1.2g,
-            "carbohydrates": 19g,
-            "fiber": 2.7g,
-            "sugars": 6.3g
-        }
-    },
-    {
-        "ingredient_name": "Pomegranate",
-        "pros": "Rich in antioxidants, supports heart health, boosts immunity.",
-        "cons": "High in natural sugars, can cause allergic reactions.",
-        "nutritional_information": {
-            "calories": 83,
-            "protein": 1.7g,
-            "fat": 1.2g,
-            "carbohydrates": 18.7g,
-            "fiber": 4g,
-            "sugars": 13.7g
-        }
-    },
-    {
-        "ingredient_name": "Banana",
-        "pros": "Rich in potassium, supports heart health, provides energy.",
-        "cons": "High in natural sugars, can cause digestive issues in large amounts.",
-        "nutritional_information": {
-            "calories": 89,
-            "protein": 1.1g,
-            "fat": 0.3g,
-            "carbohydrates": 22.8g,
-            "fiber": 2.6g,
-            "sugars": 12.2g
-        }
-    },
-    {
-        "ingredient_name": "Papaya",
-        "pros": "Rich in vitamins A and C, supports digestion, boosts immunity.",
-        "cons": "Can cause allergic reactions, excessive consumption can lead to digestive issues.",
-        "nutritional_information": {
-            "calories": 43,
-            "protein": 0.5g,
-            "fat": 0.3g,
-            "carbohydrates": 10.8g,
-            "fiber": 1.7g,
-            "sugars": 7.8g
-        }
-    },
-    {
-        "ingredient_name": "Guava",
-        "pros": "Rich in vitamins C and A, supports digestion, boosts immunity.",
-        "cons": "Can cause digestive issues in large amounts, high in natural sugars.",
-        "nutritional_information": {
-            "calories": 68,
-            "protein": 2.6g,
-            "fat": 0.9g,
-            "carbohydrates": 14.3g,
-            "fiber": 5.4g,
-            "sugars": 8.9g
-        }
-    },
-    {
-        "ingredient_name": "Chia Seeds",
-        "pros": "High in fiber and omega-3 fatty acids, supports heart health, aids in digestion.",
-        "cons": "Can cause digestive issues if not consumed with enough water.",
-        "nutritional_information": {
-            "calories": 486,
-            "protein": 16.5g,
-            "fat": 30.7g,
-            "carbohydrates": 42.1g,
-            "fiber": 34.4g,
-            "sugars": 0g
-        }
-    },
-    {
-        "ingredient_name": "Flaxseeds",
-        "pros": "High in fiber and omega-3 fatty acids, supports heart health, aids in digestion.",
-        "cons": "Can cause digestive issues if not consumed with enough water.",
-        "nutritional_information": {
-            "calories": 534,
-            "protein": 18.3g,
-            "fat": 42.2g,
-            "carbohydrates": 28.9g,
-            "fiber": 27.3g,
-            "sugars": 1.6g
-        }
-    },
-    {
-        "ingredient_name": "Sesame Seeds",
-        "pros": "Rich in vitamins and minerals, supports heart health, aids in digestion.",
-        "cons": "High in calories, can cause allergic reactions.",
-        "nutritional_information": {
-            "calories": 573,
-            "protein": 17.7g,
-            "fat": 49.7g,
-            "carbohydrates": 23.4g,
-            "fiber": 11.8g,
-            "sugars": 0.3g
-        }
-    }
-]
+    </style>
+</head>
+<body>
+    <h1>Indian Ingredients</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Ingredient Name</th>
+                <th>Pros</th>
+                <th>Cons</th>
+                <th>Calories</th>
+                <th>Protein (g)</th>
+                <th>Fat (g)</th>
+                <th>Carbohydrates (g)</th>
+                <th>Fiber (g)</th>
+                <th>Sugars (g)</th>
+            </tr>
+        </thead>
+        <tbody id="ingredient-table">
+            <!-- Data will be inserted here -->
+        </tbody>
+    </table>
+
+    <script>
+        const ingredients = [
+            {
+                "ingredient_name": "Coconut Oil",
+                "pros": "Contains healthy fats, boosts metabolism, supports skin and hair health.",
+                "cons": "High in saturated fats, excessive consumption can raise cholesterol levels.",
+                "nutritional_information": {
+                    "calories": 862,
+                    "protein": "0g",
+                    "fat": "100g",
+                    "carbohydrates": "0g",
+                    "fiber": "0g",
+                    "sugars": "0g"
+                }
+            },
+            {
+                "ingredient_name": "Peanuts",
+                "pros": "High in protein and healthy fats, rich in vitamins and minerals, supports heart health.",
+                "cons": "High in calories, can cause allergic reactions.",
+                "nutritional_information": {
+                    "calories": 567,
+                    "protein": "25.8g",
+                    "fat": "49.2g",
+                    "carbohydrates": "16.1g",
+                    "fiber": "8.5g",
+                    "sugars": "4.7g"
+                }
+            },
+            {
+                "ingredient_name": "Ghee",
+                "pros": "Rich in healthy fats, supports digestion, boosts immunity.",
+                "cons": "High in saturated fats, high in calories.",
+                "nutritional_information": {
+                    "calories": 900,
+                    "protein": "0g",
+                    "fat": "100g",
+                    "carbohydrates": "0g",
+                    "fiber": "0g",
+                    "sugars": "0g"
+                }
+            },
+            {
+                "ingredient_name": "Paneer",
+                "pros": "High in protein and calcium, supports bone health, aids in weight management.",
+                "cons": "High in calories and fat, can cause lactose intolerance symptoms.",
+                "nutritional_information": {
+                    "calories": 265,
+                    "protein": "18.3g",
+                    "fat": "20.8g",
+                    "carbohydrates": "1.2g",
+                    "fiber": "0g",
+                    "sugars": "0.6g"
+                }
+            },
+            {
+                "ingredient_name": "Mango",
+                "pros": "Rich in vitamins A and C, supports eye health, boosts immunity.",
+                "cons": "High in sugar, can cause allergic reactions.",
+                "nutritional_information": {
+                    "calories": 60,
+                    "protein": "0.8g",
+                    "fat": "0.4g",
+                    "carbohydrates": "15g",
+                    "fiber": "1.6g",
+                    "sugars": "13.7g"
+                }
+            },
+            {
+                "ingredient_name": "Spinach",
+                "pros": "Rich in iron and vitamins, supports eye health, boosts immunity.",
+                "cons": "Contains oxalates which can interfere with calcium absorption.",
+                "nutritional_information": {
+                    "calories": 23,
+                    "protein": "2.9g",
+                    "fat": "0.4g",
+                    "carbohydrates": "3.6g",
+                    "fiber": "2.2g",
+                    "sugars": "0.4g"
+                }
+            },
+            {
+                "ingredient_name": "Green Peas",
+                "pros": "High in protein and fiber, rich in vitamins and minerals, supports heart health.",
+                "cons": "Can cause bloating and gas.",
+                "nutritional_information": {
+                    "calories": 81,
+                    "protein": "5.4g",
+                    "fat": "0.4g",
+                    "carbohydrates": "14.5g",
+                    "fiber": "5.1g",
+                    "sugars": "5.7g"
+                }
+            },
+            {
+                "ingredient_name": "Brinjal (Eggplant)",
+                "pros": "Low in calories, rich in antioxidants, supports heart health.",
+                "cons": "Contains solanine which can be toxic in large amounts, may cause allergic reactions.",
+                "nutritional_information": {
+                    "calories": 25,
+                    "protein": "1g",
+                    "fat": "0.2g",
+                    "carbohydrates": "5.9g",
+                    "fiber": "3g",
+                    "sugars": "3.5g"
+                }
+            },
+            {
+                "ingredient_name": "Bottle Gourd",
+                "pros": "Low in calories, aids in digestion, supports heart health.",
+                "cons": "Bitter varieties can be toxic.",
+                "nutritional_information": {
+                    "calories": 14,
+                    "protein": "0.6g",
+                    "fat": "0.1g",
+                    "carbohydrates": "3.4g",
+                    "fiber": "1.2g",
+                    "sugars": "1.8g"
+                }
+            },
+            {
+                "ingredient_name": "Lady Finger (Okra)",
+                "pros": "Rich in vitamins and minerals, supports digestion, boosts immunity.",
+                "cons": "Can cause digestive issues in large quantities.",
+                "nutritional_information": {
+                    "calories": 33,
+                    "protein": "2g",
+                    "fat": "0.2g",
+                    "carbohydrates": "7.5g",
+                    "fiber": "3.2g",
+                    "sugars": "1.5g"
+                }
+            },
+            {
+                "ingredient_name": "Pumpkin",
+                "pros": "Low in calories, rich in vitamins A and C, supports eye health.",
+                "cons": "High in natural sugars.",
+                "nutritional_information": {
+                    "calories": 26,
+                    "protein": "1g",
+                    "fat": "0.1g",
+                    "carbohydrates": "6.5g",
+                    "fiber": "0.5g",
+                    "sugars": "2.8g"
+                }
+            },
+            {
+                "ingredient_name": "Cauliflower",
+                "pros": "Low in calories, rich in vitamins and minerals, supports digestion.",
+                "cons": "Can cause bloating and gas.",
+                "nutritional_information": {
+                    "calories": 25,
+                    "protein": "1.9g",
+                    "fat": "0.3g",
+                    "carbohydrates": "4.9g",
+                    "fiber": "2g",
+                    "sugars": "2g"
+                }
+            },
+            {
+                "ingredient_name": "Tomato",
+                "pros": "Rich in vitamins A and C, supports heart health, boosts immunity.",
+                "cons": "Can cause acid reflux and heartburn.",
+                "nutritional_information": {
+                    "calories": 18,
+                    "protein": "0.9g",
+                    "fat": "0.2g",
+                    "carbohydrates": "3.9g",
+                    "fiber": "1.2g",
+                    "sugars": "2.6g"
+                }
+            },
+            {
+                "ingredient_name": "Green Chili",
+                "pros": "Rich in vitamins A and C, boosts metabolism, supports digestion.",
+                "cons": "Can cause stomach irritation, excessive consumption can lead to digestive issues.",
+                "nutritional_information": {
+                    "calories": 40,
+                    "protein": "2g",
+                    "fat": "0.2g",
+                    "carbohydrates": "9g",
+                    "fiber": "1.5g",
+                    "sugars": "5g"
+                }
+            },
+            {
+                "ingredient_name": "Bitter Gourd",
+                "pros": "Low in calories, helps regulate blood sugar levels, supports digestion.",
+                "cons": "Bitter taste, excessive consumption can lead to liver toxicity.",
+                "nutritional_information": {
+                    "calories": 17,
+                    "protein": "1g",
+                    "fat": "0.2g",
+                    "carbohydrates": "3.7g",
+                    "fiber": "2.8g",
+                    "sugars": "1.2g"
+                }
+            },
+            {
+                "ingredient_name": "Beetroot",
+                "pros": "Rich in vitamins and minerals, supports heart health, improves exercise performance.",
+                "cons": "High in natural sugars, can cause beeturia (red urine).",
+                "nutritional_information": {
+                    "calories": 43,
+                    "protein": "1.6g",
+                    "fat": "0.2g",
+                    "carbohydrates": "9.6g",
+                    "fiber": "2.8g",
+                    "sugars": "6.8g"
+                }
+            },
+            {
+                "ingredient_name": "Garlic",
+                "pros": "Rich in antioxidants, supports heart health, boosts immunity.",
+                "cons": "Can cause bad breath, stomach upset, and allergic reactions.",
+                "nutritional_information": {
+                    "calories": 149,
+                    "protein": "6.4g",
+                    "fat": "0.5g",
+                    "carbohydrates": "33.1g",
+                    "fiber": "2.1g",
+                    "sugars": "1g"
+                }
+            },
+            {
+                "ingredient_name": "Onion",
+                "pros": "Rich in antioxidants, supports heart health, boosts immunity.",
+                "cons": "Can cause bad breath, stomach upset, and allergic reactions.",
+                "nutritional_information": {
+                    "calories": 40,
+                    "protein": "1.1g",
+                    "fat": "0.1g",
+                    "carbohydrates": "9.3g",
+                    "fiber": "1.7g",
+                    "sugars": "4.2g"
+                }
+            },
+            {
+                "ingredient_name": "Potato",
+                "pros": "Rich in vitamins and minerals, supports digestion, boosts energy.",
+                "cons": "High in carbohydrates, can cause blood sugar spikes.",
+                "nutritional_information": {
+                    "calories": 77,
+                    "protein": "2g",
+                    "fat": "0.1g",
+                    "carbohydrates": "17.6g",
+                    "fiber": "2.2g",
+                    "sugars": "0.8g"
+                }
+            },
+            {
+                "ingredient_name": "Rice",
+                "pros": "Rich in carbohydrates, provides energy, supports heart health.",
+                "cons": "High in carbohydrates, can cause blood sugar spikes, low in fiber.",
+                "nutritional_information": {
+                    "calories": 130,
+                    "protein": "2.7g",
+                    "fat": "0.3g",
+                    "carbohydrates": "28.2g",
+                    "fiber": "0.4g",
+                    "sugars": "0.1g"
+                }
+            },
+            {
+                "ingredient_name": "Wheat",
+                "pros": "Rich in fiber, supports digestion, provides energy.",
+                "cons": "Contains gluten, can cause allergies and digestive issues.",
+                "nutritional_information": {
+                    "calories": 339,
+                    "protein": "13.2g",
+                    "fat": "2.5g",
+                    "carbohydrates": "71.2g",
+                    "fiber": "12.2g",
+                    "sugars": "0.4g"
+                }
+            },
+            {
+                "ingredient_name": "Quinoa",
+                "pros": "High in protein and fiber, rich in vitamins and minerals, supports heart health.",
+                "cons": "Can cause digestive issues in some people, may contain anti-nutrients.",
+                "nutritional_information": {
+                    "calories": 120,
+                    "protein": "4.1g",
+                    "fat": "1.9g",
+                    "carbohydrates": "21.3g",
+                    "fiber": "2.8g",
+                    "sugars": "0.9g"
+                }
+            },
+            {
+                "ingredient_name": "Sorghum",
+                "pros": "Gluten-free, rich in fiber, supports digestion.",
+                "cons": "Can cause digestive issues in large amounts.",
+                "nutritional_information": {
+                    "calories": 329,
+                    "protein": "11.3g",
+                    "fat": "3.3g",
+                    "carbohydrates": "72.1g",
+                    "fiber": "6.7g",
+                    "sugars": "0g"
+                }
+            },
+            {
+                "ingredient_name": "Barley",
+                "pros": "Rich in fiber, supports digestion, helps regulate blood sugar levels.",
+                "cons": "Contains gluten, can cause digestive issues.",
+                "nutritional_information": {
+                    "calories": 354,
+                    "protein": "12.5g",
+                    "fat": "2.3g",
+                    "carbohydrates": "73.5g",
+                    "fiber": "17.3g",
+                    "sugars": "0.8g"
+                }
+            },
+            {
+                "ingredient_name": "Corn",
+                "pros": "Rich in fiber, vitamins, and minerals, supports digestion, provides energy.",
+                "cons": "High in carbohydrates, can cause blood sugar spikes.",
+                "nutritional_information": {
+                    "calories": 86,
+                    "protein": "3.2g",
+                    "fat": "1.2g",
+                    "carbohydrates": "19g",
+                    "fiber": "2.7g",
+                    "sugars": "6.3g"
+                }
+            },
+            {
+                "ingredient_name": "Pomegranate",
+                "pros": "Rich in antioxidants, supports heart health, boosts immunity.",
+                "cons": "High in natural sugars, can cause allergic reactions.",
+                "nutritional_information": {
+                    "calories": 83,
+                    "protein": "1.7g",
+                    "fat": "1.2g",
+                    "carbohydrates": "18.7g",
+                    "fiber": "4g",
+                    "sugars": "13.7g"
+                }
+            },
+            {
+                "ingredient_name": "Banana",
+                "pros": "Rich in potassium, supports heart health, provides energy.",
+                "cons": "High in natural sugars, can cause digestive issues in large amounts.",
+                "nutritional_information": {
+                    "calories": 89,
+                    "protein": "1.1g",
+                    "fat": "0.3g",
+                    "carbohydrates": "22.8g",
+                    "fiber": "2.6g",
+                    "sugars": "12.2g"
+                }
+            },
+            {
+                "ingredient_name": "Papaya",
+                "pros": "Rich in vitamins A and C, supports digestion, boosts immunity.",
+                "cons": "Can cause allergic reactions, excessive consumption can lead to digestive issues.",
+                "nutritional_information": {
+                    "calories": 43,
+                    "protein": "0.5g",
+                    "fat": "0.3g",
+                    "carbohydrates": "10.8g",
+                    "fiber": "1.7g",
+                    "sugars": "7.8g"
+                }
+            },
+            {
+                "ingredient_name": "Guava",
+                "pros": "Rich in vitamins C and A, supports digestion, boosts immunity.",
+                "cons": "Can cause digestive issues in large amounts, high in natural sugars.",
+                "nutritional_information": {
+                    "calories": 68,
+                    "protein": "2.6g",
+                    "fat": "0.9g",
+                    "carbohydrates": "14.3g",
+                    "fiber": "5.4g",
+                    "sugars": "8.9g"
+                }
+            },
+            {
+                "ingredient_name": "Chia Seeds",
+                "pros": "High in fiber and omega-3 fatty acids, supports heart health, aids in digestion.",
+                "cons": "Can cause digestive issues if not consumed with enough water.",
+                "nutritional_information": {
+                    "calories": 486,
+                    "protein": "16.5g",
+                    "fat": "30.7g",
+                    "carbohydrates": "42.1g",
+                    "fiber": "34.4g",
+                    "sugars": "0g"
+                }
+            },
+            {
+                "ingredient_name": "Flaxseeds",
+                "pros": "High in fiber and omega-3 fatty acids, supports heart health, aids in digestion.",
+                "cons": "Can cause digestive issues if not consumed with enough water.",
+                "nutritional_information": {
+                    "calories": 534,
+                    "protein": "18.3g",
+                    "fat": "42.2g",
+                    "carbohydrates": "28.9g",
+                    "fiber": "27.3g",
+                    "sugars": "1.6g"
+                }
+            },
+            {
+                "ingredient_name": "Sesame Seeds",
+                "pros": "Rich in vitamins and minerals, supports heart health, aids in digestion.",
+                "cons": "High in calories, can cause allergic reactions.",
+                "nutritional_information": {
+                    "calories": 573,
+                    "protein": "17.7g",
+                    "fat": "49.7g",
+                    "carbohydrates": "23.4g",
+                    "fiber": "11.8g",
+                    "sugars": "0.3g"
+                }
+            }
+        ];
+
+        const tableBody = document.getElementById('ingredient-table');
+
+        ingredients.forEach(ingredient => {
+            const row = document.createElement('tr');
+
+            row.innerHTML = `
+                <td>${ingredient.ingredient_name}</td>
+                <td>${ingredient.pros}</td>
+                <td>${ingredient.cons}</td>
+                <td>${ingredient.nutritional_information.calories}</td>
+                <td>${ingredient.nutritional_information.protein}</td>
+                <td>${ingredient.nutritional_information.fat}</td>
+                <td>${ingredient.nutritional_information.carbohydrates}</td>
+                <td>${ingredient.nutritional_information.fiber}</td>
+                <td>${ingredient.nutritional_information.sugars}</td>
+            `;
+
+            tableBody.appendChild(row);
+        });
+    </script>
+</body>
+</html>
