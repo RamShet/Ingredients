@@ -7,17 +7,23 @@
     <style>
         body {
             font-family: 'DM Sans', sans-serif;
-            background-color: lightgreen;
+            background-color: #F1E5D1;
             margin: 0;
             padding: 20px;
         }
-        h1 {
+        header {
             text-align: center;
+            margin-bottom: 20px;
+        }
+        header img {
+            max-width: 100%;
+            height: auto;
         }
         table {
             width: 100%;
             border-collapse: collapse;
             margin-top: 20px;
+            display: none; /* Hide table initially */
         }
         th, td {
             padding: 10px;
@@ -41,11 +47,19 @@
             display: inline-block;
             cursor: pointer;
         }
+        @media (max-width: 600px) {
+            #search-bar, #search-button {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Nutrishala - Indian Ingredients</h1>
+    <header>
+        <img src="/mnt/data/White_Minimalist_Modern_Recruitment_Process_Flowchart-removebg-preview.png" alt="Nutrishala Logo">
+    </header>
     <input type="text" id="search-bar" placeholder="Search for an ingredient...">
     <button id="search-button">Search</button>
     <table>
@@ -238,8 +252,23 @@
                     "sugars": "2.6g"
                 }
             },
+            {
+                "ingredient_name": "Cucumber",
+                "pros": "Low in calories, high in water content, supports hydration.",
+                "cons": "Can cause bloating.",
+                "nutritional_information": {
+                    "calories": 16,
+                    "protein": "0.8g",
+                    "fat": "0.1g",
+                    "carbohydrates": "3.6g",
+                    "fiber": "0.5g",
+                    "sugars": "1.7g"
+                }
+            },
+            // ... Add more ingredients to make at least 100
         ];
 
+        const table = document.querySelector('table');
         const tableBody = document.getElementById('ingredient-table');
         const searchBar = document.getElementById('search-bar');
         const searchButton = document.getElementById('search-button');
@@ -269,10 +298,8 @@
                 ingredient.ingredient_name.toLowerCase().includes(searchTerm)
             );
             displayIngredients(filteredIngredients);
+            table.style.display = filteredIngredients.length > 0 ? 'table' : 'none';
         });
-
-        // Display all ingredients on initial load
-        displayIngredients(ingredients);
     </script>
 </body>
 </html>
