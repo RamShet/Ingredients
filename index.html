@@ -38,6 +38,14 @@
             border: 1px solid #ccc;
             border-radius: 5px;
         }
+        .search-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff;
+            cursor: pointer;
+        }
         .ingredient-table {
             width: 100%;
             border-collapse: collapse;
@@ -80,6 +88,7 @@
         </div>
         <div class="search-container">
             <input type="text" id="searchBox" class="search-box" placeholder="Search for an ingredient..." onkeyup="searchIngredient()">
+            <button id="searchButton" class="search-button" onclick="searchIngredient()">Search</button>
         </div>
         <div id="ingredientList" class="ingredient-list">
             <!-- Ingredient cards will be inserted here -->
@@ -481,52 +490,54 @@
             {
     ];
 
-    function displayIngredients(ingredients) {
-        const ingredientList = document.getElementById('ingredientList');
+        function displayIngredients(ingredients) {
+            const ingredientList = document.getElementById('ingredientList');
 
-        // Clear previous content
-        ingredientList.innerHTML = '';
+            // Clear previous content
+            ingredientList.innerHTML = '';
 
-        // Loop through each ingredient and create a card for it
-        ingredients.forEach(ingredient => {
-            const card = document.createElement('div');
-            card.classList.add('ingredient-card');
+            // Loop through each ingredient and create a card for it
+            ingredients.forEach(ingredient => {
+                const card = document.createElement('div');
+                card.classList.add('ingredient-card');
 
-            const name = document.createElement('h3');
-            name.textContent = ingredient.ingredient_name;
+                const name = document.createElement('h3');
+                name.textContent = ingredient.ingredient_name;
 
-            const pros = document.createElement('p');
-            pros.textContent = "Pros: " + ingredient.pros;
+                const pros = document.createElement('p');
+                pros.textContent = "Pros: " + ingredient.pros;
 
-            const cons = document.createElement('p');
-            cons.textContent = "Cons: " + ingredient.cons;
+                const cons = document.createElement('p');
+                cons.textContent = "Cons: " + ingredient.cons;
 
-            const nutritionalInfo = document.createElement('p');
-            nutritionalInfo.textContent = "Nutritional Information: Calories - " + ingredient.nutritional_information.calories + ", Protein - " + ingredient.nutritional_information.protein + ", Fat - " + ingredient.nutritional_information.fat + ", Carbohydrates - " + ingredient.nutritional_information.carbohydrates + ", Fiber - " + ingredient.nutritional_information.fiber + ", Sugars - " + ingredient.nutritional_information.sugars;
+                const nutritionalInfo = document.createElement('p');
+                nutritionalInfo.textContent = "Nutritional Information: Calories - " + ingredient.nutritional_information.calories + ", Protein - " + ingredient.nutritional_information.protein + ", Fat - " + ingredient.nutritional_information.fat + ", Carbohydrates - " + ingredient.nutritional_information.carbohydrates + ", Fiber - " + ingredient.nutritional_information.fiber + ", Sugars - " + ingredient.nutritional_information.sugars;
 
-            card.appendChild(name);
-            card.appendChild(pros);
-            card.appendChild(cons);
-            card.appendChild(nutritionalInfo);
+                card.appendChild(name);
+                card.appendChild(pros);
+                card.appendChild(cons);
+                card.appendChild(nutritionalInfo);
 
-            ingredientList.appendChild(card);
-        });
+                ingredientList.appendChild(card);
+            });
 
-        // Show the ingredient list container
-        ingredientList.style.display = 'block';
-    }
+            // Show the ingredient list container
+            ingredientList.style.display = 'block';
+        }
 
-    function searchIngredient() {
-        const searchBox = document.getElementById('searchBox');
-        const searchTerm = searchBox.value.toLowerCase();
+        function searchIngredient() {
+            const searchBox = document.getElementById('searchBox');
+            const searchTerm = searchBox.value.toLowerCase();
 
-        const filteredIngredients = ingredients.filter(ingredient =>
-            ingredient.ingredient_name.toLowerCase().includes(searchTerm)
-        );
+            const filteredIngredients = ingredients.filter(ingredient =>
+                ingredient.ingredient_name.toLowerCase().includes(searchTerm)
+            );
 
-        displayIngredients(filteredIngredients);
-    }
+            displayIngredients(filteredIngredients);
+        }
 
-    // Display all ingredients when the page loads
-    displayIngredients(ingredients);
-</script>
+        // Display all ingredients when the page loads
+        displayIngredients(ingredients);
+    </script>
+</body>
+</html>
