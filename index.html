@@ -16,6 +16,10 @@
             font-size: 24px;
             text-transform: uppercase; /* Make the text uppercase */
         }
+        h2 {
+            text-align: center;
+            font-size: 20px;
+        }
         #search-bar {
             margin-bottom: 10px;
             padding: 10px;
@@ -46,20 +50,12 @@
 </head>
 <body>
     <h1>Nutrishala</h1>
-    <h2 style="text-align: center;">Indian Ingredients</h2>
+    <h2>Indian Ingredients</h2>
     <input type="text" id="search-bar" placeholder="Search for an ingredient...">
     <button id="search-button">Search</button>
 
     <div id="ingredient-info" class="ingredient-info">
-        <div><strong>Ingredient Name:</strong> Coconut Oil</div>
-        <div><strong>Pros:</strong> Contains healthy fats, boosts metabolism, supports skin and hair health.</div>
-        <div><strong>Cons:</strong> High in saturated fats, excessive consumption can raise cholesterol levels.</div>
-        <div><strong>Calories:</strong> 862</div>
-        <div><strong>Protein (g):</strong> 0g</div>
-        <div><strong>Fat (g):</strong> 100g</div>
-        <div><strong>Carbohydrates (g):</strong> 0g</div>
-        <div><strong>Fiber (g):</strong> 0g</div>
-        <div><strong>Sugars (g):</strong> 0g</div>
+        <!-- Ingredient information will be inserted here -->
     </div>
 
     <script>
@@ -76,8 +72,7 @@
                     "fiber": "0g",
                     "sugars": "0g"
                 }
-            },
-            
+            }
         ];
 
         const ingredientInfoContainer = document.getElementById('ingredient-info');
@@ -111,6 +106,9 @@
         }
 
         searchButton.addEventListener('click', searchIngredient);
+
+        // Display the first ingredient by default
+        displayIngredientInfo(ingredients[0]);
     </script>
 </body>
 </html>
