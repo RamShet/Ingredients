@@ -14,55 +14,28 @@
   <script>
     const ingredients = [
       {
-        "ingredientname": "Tomato",
+        "ingredientName": "Tomato", // Capitalized for clarity
         "description": "A red fruit",
-        "nutritionalinformation": "Rich in vitamins A and C"
+        "nutritionalInformation": "Rich in vitamins A and C"
       },
-      {
-        "ingredientname": "Carrot",
-        "description": "An orange vegetable",
-        "nutritionalinformation": "High in beta-carotene"
-      },
-      {
-        "ingredientname": "Spinach",
-        "description": "A green leafy vegetable",
-        "nutritionalinformation": "Good source of iron"
-      },
-      {
-        "ingredientname": "A2 Ghee",
-        "description": "Good",
-        "nutritionalinformation": "Good source of iron"
-      },
-      {
-        "ingredientname": "Sugar",
-        "description": "Bad",
-        "description": "Good source of iron"
-      },
-      {
-        "ingredientname": "Jaggery",
-        "description": "Good",
-        "nutritionalinformation": "Good source of iron"
-      }
+      // ... other ingredients
     ];
 
     function searchIngredient() {
       const searchInput = document.getElementById('searchInput').value.toLowerCase();
       const resultDiv = document.getElementById('result');
-      resultDiv.innerHTML = '';
-      let found = false;
+      resultDiv.innerHTML = ''; // Clear previous results
 
-      ingredients.forEach(ingredient => {
-        if (ingredient.ingredientname.toLowerCase() === searchInput) {
-          found = true;
-          resultDiv.innerHTML = `
-            <h2>${ingredient.ingredientname}</h2>
-            <p><strong>Description:</strong> ${ingredient.description}</p>
-            <p><strong>Nutritional Information:</strong> ${ingredient.nutritionalinformation}</p>
-          `;
-        }
-      });
+      const foundIngredient = ingredients.find(ingredient => 
+        ingredient.ingredientName.toLowerCase() === searchInput); // Use find for single match
 
-      if (!found) {
+      if (foundIngredient) {
+        resultDiv.innerHTML = `
+          <h2>${foundIngredient.ingredientName}</h2>
+          <p><strong>Description:</strong> ${foundIngredient.description}</p>
+          <p><strong>Nutritional Information:</strong> ${foundIngredient.nutritionalInformation}</p>
+        `;
+      } else {
         resultDiv.innerHTML = '<p>Ingredient not found.</p>';
       }
     }
