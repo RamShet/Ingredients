@@ -13,10 +13,18 @@
 
   <script>
     const ingredients = [
+      // Your JSON data containing ingredient information
       {
-        "ingredientName": "Tomato", // Capitalized for clarity
-        "description": "A red fruit",
-        "nutritionalInformation": "Rich in vitamins A and C"
+        "ingredient_name": "Apple",
+        "description": "A sweet, edible fruit produced by an apple tree.",
+        "nutritional_information": {
+          "calories": 52,
+          "protein": "0.3g",
+          "fat": "0.2g",
+          "carbohydrates": "14g",
+          "fiber": "2.4g",
+          "sugars": "10g"
+        }
       },
       // ... other ingredients
     ];
@@ -24,17 +32,41 @@
     function searchIngredient() {
       const searchInput = document.getElementById('searchInput').value.toLowerCase();
       const resultDiv = document.getElementById('result');
-      resultDiv.innerHTML = ''; // Clear previous results
+      resultDiv.innerHTML = '';
 
       const foundIngredient = ingredients.find(ingredient => 
-        ingredient.ingredientName.toLowerCase() === searchInput); // Use find for single match
+        ingredient.ingredient_name.toLowerCase() === searchInput);
 
       if (foundIngredient) {
-        resultDiv.innerHTML = `
-          <h2>${foundIngredient.ingredientName}</h2>
-          <p><strong>Description:</strong> ${foundIngredient.description}</p>
-          <p><strong>Nutritional Information:</strong> ${foundIngredient.nutritionalInformation}</p>
+        let tableContent = `
+          <table>
+            <thead>
+              <tr>
+                <th>Ingredient</th>
+                <th>Description</th>
+                <th>Calories</th>
+                <th>Protein</th>
+                <th>Fat</th>
+                <th>Carbohydrates</th>
+                <th>Fiber</th>
+                <th>Sugars</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>${foundIngredient.ingredient_name}</td>
+                <td>${foundIngredient.description}</td>
+                <td>${foundIngredient.nutritional_information.calories}</td>
+                <td>${foundIngredient.nutritional_information.protein}</td>
+                <td>${foundIngredient.nutritional_information.fat}</td>
+                <td>${foundIngredient.nutritional_information.carbohydrates}</td>
+                <td>${foundIngredient.nutritional_information.fiber}</td>
+                <td>${foundIngredient.nutritional_information.sugars}</td>
+              </tr>
+            </tbody>
+          </table>
         `;
+        resultDiv.innerHTML = tableContent;
       } else {
         resultDiv.innerHTML = '<p>Ingredient not found.</p>';
       }
