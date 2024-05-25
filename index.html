@@ -28,10 +28,18 @@
             background-color: #f2f2f2;
         }
         #search-bar {
-            margin-bottom: 20px;
+            margin-bottom: 10px;
             padding: 10px;
-            width: 100%;
+            width: calc(100% - 120px);
             box-sizing: border-box;
+            display: inline-block;
+        }
+        #search-button {
+            padding: 10px;
+            width: 100px;
+            box-sizing: border-box;
+            display: inline-block;
+            cursor: pointer;
         }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
@@ -39,6 +47,7 @@
 <body>
     <h1>Nutrishala - Indian Ingredients</h1>
     <input type="text" id="search-bar" placeholder="Search for an ingredient...">
+    <button id="search-button">Search</button>
     <table>
         <thead>
             <tr>
@@ -229,28 +238,41 @@
                     "sugars": "2.6g"
                 }
             },
-            {
         ];
 
         const tableBody = document.getElementById('ingredient-table');
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
 
-        ingredients.forEach(ingredient => {
-            const row = document.createElement('tr');
+        function displayIngredients(ingredients) {
+            tableBody.innerHTML = '';
+            ingredients.forEach(ingredient => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${ingredient.ingredient_name}</td>
+                    <td>${ingredient.pros}</td>
+                    <td>${ingredient.cons}</td>
+                    <td>${ingredient.nutritional_information.calories}</td>
+                    <td>${ingredient.nutritional_information.protein}</td>
+                    <td>${ingredient.nutritional_information.fat}</td>
+                    <td>${ingredient.nutritional_information.carbohydrates}</td>
+                    <td>${ingredient.nutritional_information.fiber}</td>
+                    <td>${ingredient.nutritional_information.sugars}</td>
+                `;
+                tableBody.appendChild(row);
+            });
+        }
 
-            row.innerHTML = `
-                <td>${ingredient.ingredient_name}</td>
-                <td>${ingredient.pros}</td>
-                <td>${ingredient.cons}</td>
-                <td>${ingredient.nutritional_information.calories}</td>
-                <td>${ingredient.nutritional_information.protein}</td>
-                <td>${ingredient.nutritional_information.fat}</td>
-                <td>${ingredient.nutritional_information.carbohydrates}</td>
-                <td>${ingredient.nutritional_information.fiber}</td>
-                <td>${ingredient.nutritional_information.sugars}</td>
-            `;
-
-            tableBody.appendChild(row);
+        searchButton.addEventListener('click', () => {
+            const searchTerm = searchBar.value.toLowerCase();
+            const filteredIngredients = ingredients.filter(ingredient => 
+                ingredient.ingredient_name.toLowerCase().includes(searchTerm)
+            );
+            displayIngredients(filteredIngredients);
         });
+
+        // Display all ingredients on initial load
+        displayIngredients(ingredients);
     </script>
 </body>
 </html>
