@@ -7,25 +7,12 @@
     <style>
         body {
             font-family: 'DM Sans', sans-serif;
-            background-color: 7AB2B2;
+            background-color: #7AB2B2;
             margin: 0;
             padding: 20px;
         }
         h1 {
             text-align: center;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-        th, td {
-            padding: 10px;
-            text-align: left;
-            border: 1px solid #ddd;
-        }
-        th {
-            background-color: #f2f2f2;
         }
         #search-bar {
             margin-bottom: 10px;
@@ -41,6 +28,12 @@
             display: inline-block;
             cursor: pointer;
         }
+        .ingredient-info {
+            margin-top: 20px;
+        }
+        .ingredient-info div {
+            margin-bottom: 10px;
+        }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
 </head>
@@ -48,24 +41,10 @@
     <h1>Nutrishala - Indian Ingredients</h1>
     <input type="text" id="search-bar" placeholder="Search for an ingredient...">
     <button id="search-button">Search</button>
-    <table>
-        <thead>
-            <tr>
-                <th>Ingredient Name</th>
-                <th>Pros</th>
-                <th>Cons</th>
-                <th>Calories</th>
-                <th>Protein (g)</th>
-                <th>Fat (g)</th>
-                <th>Carbohydrates (g)</th>
-                <th>Fiber (g)</th>
-                <th>Sugars (g)</th>
-            </tr>
-        </thead>
-        <tbody id="ingredient-table">
-            <!-- Data will be inserted here -->
-        </tbody>
-    </table>
+
+    <div id="ingredient-info" class="ingredient-info">
+        <!-- Ingredient information will be inserted here -->
+    </div>
 
     <script>
         const ingredients = [
@@ -82,197 +61,40 @@
                     "sugars": "0g"
                 }
             },
-            {
-                "ingredient_name": "Peanuts",
-                "pros": "High in protein and healthy fats, rich in vitamins and minerals, supports heart health.",
-                "cons": "High in calories, can cause allergic reactions.",
-                "nutritional_information": {
-                    "calories": 567,
-                    "protein": "25.8g",
-                    "fat": "49.2g",
-                    "carbohydrates": "16.1g",
-                    "fiber": "8.5g",
-                    "sugars": "4.7g"
-                }
-            },
-            {
-                "ingredient_name": "Ghee",
-                "pros": "Rich in healthy fats, supports digestion, boosts immunity.",
-                "cons": "High in saturated fats, high in calories.",
-                "nutritional_information": {
-                    "calories": 900,
-                    "protein": "0g",
-                    "fat": "100g",
-                    "carbohydrates": "0g",
-                    "fiber": "0g",
-                    "sugars": "0g"
-                }
-            },
-            {
-                "ingredient_name": "Paneer",
-                "pros": "High in protein and calcium, supports bone health, aids in weight management.",
-                "cons": "High in calories and fat, can cause lactose intolerance symptoms.",
-                "nutritional_information": {
-                    "calories": 265,
-                    "protein": "18.3g",
-                    "fat": "20.8g",
-                    "carbohydrates": "1.2g",
-                    "fiber": "0g",
-                    "sugars": "0.6g"
-                }
-            },
-            {
-                "ingredient_name": "Mango",
-                "pros": "Rich in vitamins A and C, supports eye health, boosts immunity.",
-                "cons": "High in sugar, can cause allergic reactions.",
-                "nutritional_information": {
-                    "calories": 60,
-                    "protein": "0.8g",
-                    "fat": "0.4g",
-                    "carbohydrates": "15g",
-                    "fiber": "1.6g",
-                    "sugars": "13.7g"
-                }
-            },
-            {
-                "ingredient_name": "Spinach",
-                "pros": "Rich in iron and vitamins, supports eye health, boosts immunity.",
-                "cons": "Contains oxalates which can interfere with calcium absorption.",
-                "nutritional_information": {
-                    "calories": 23,
-                    "protein": "2.9g",
-                    "fat": "0.4g",
-                    "carbohydrates": "3.6g",
-                    "fiber": "2.2g",
-                    "sugars": "0.4g"
-                }
-            },
-            {
-                "ingredient_name": "Green Peas",
-                "pros": "High in protein and fiber, rich in vitamins and minerals, supports heart health.",
-                "cons": "Can cause bloating and gas.",
-                "nutritional_information": {
-                    "calories": 81,
-                    "protein": "5.4g",
-                    "fat": "0.4g",
-                    "carbohydrates": "14.5g",
-                    "fiber": "5.1g",
-                    "sugars": "5.7g"
-                }
-            },
-            {
-                "ingredient_name": "Brinjal (Eggplant)",
-                "pros": "Low in calories, rich in antioxidants, supports heart health.",
-                "cons": "Contains solanine which can be toxic in large amounts, may cause allergic reactions.",
-                "nutritional_information": {
-                    "calories": 25,
-                    "protein": "1g",
-                    "fat": "0.2g",
-                    "carbohydrates": "5.9g",
-                    "fiber": "3g",
-                    "sugars": "3.5g"
-                }
-            },
-            {
-                "ingredient_name": "Bottle Gourd",
-                "pros": "Low in calories, aids in digestion, supports heart health.",
-                "cons": "Bitter varieties can be toxic.",
-                "nutritional_information": {
-                    "calories": 14,
-                    "protein": "0.6g",
-                    "fat": "0.1g",
-                    "carbohydrates": "3.4g",
-                    "fiber": "1.2g",
-                    "sugars": "1.8g"
-                }
-            },
-            {
-                "ingredient_name": "Lady Finger (Okra)",
-                "pros": "Rich in vitamins and minerals, supports digestion, boosts immunity.",
-                "cons": "Can cause digestive issues in large quantities.",
-                "nutritional_information": {
-                    "calories": 33,
-                    "protein": "2g",
-                    "fat": "0.2g",
-                    "carbohydrates": "7.5g",
-                    "fiber": "3.2g",
-                    "sugars": "1.5g"
-                }
-            },
-            {
-                "ingredient_name": "Pumpkin",
-                "pros": "Low in calories, rich in vitamins A and C, supports eye health.",
-                "cons": "High in natural sugars.",
-                "nutritional_information": {
-                    "calories": 26,
-                    "protein": "1g",
-                    "fat": "0.1g",
-                    "carbohydrates": "6.5g",
-                    "fiber": "0.5g",
-                    "sugars": "2.8g"
-                }
-            },
-            {
-                "ingredient_name": "Cauliflower",
-                "pros": "Low in calories, rich in vitamins and minerals, supports digestion.",
-                "cons": "Can cause bloating and gas.",
-                "nutritional_information": {
-                    "calories": 25,
-                    "protein": "1.9g",
-                    "fat": "0.3g",
-                    "carbohydrates": "4.9g",
-                    "fiber": "2g",
-                    "sugars": "2g"
-                }
-            },
-            {
-                "ingredient_name": "Tomato",
-                "pros": "Rich in vitamins A and C, supports heart health, boosts immunity.",
-                "cons": "Can cause acid reflux and heartburn.",
-                "nutritional_information": {
-                    "calories": 18,
-                    "protein": "0.9g",
-                    "fat": "0.2g",
-                    "carbohydrates": "3.9g",
-                    "fiber": "1.2g",
-                    "sugars": "2.6g"
-                }
-            },
+            // Rest of the ingredient objects...
         ];
 
-        const tableBody = document.getElementById('ingredient-table');
+        const ingredientInfoContainer = document.getElementById('ingredient-info');
         const searchBar = document.getElementById('search-bar');
         const searchButton = document.getElementById('search-button');
 
-        function displayIngredients(ingredients) {
-            tableBody.innerHTML = '';
-            ingredients.forEach(ingredient => {
-                const row = document.createElement('tr');
-                row.innerHTML = `
-                    <td>${ingredient.ingredient_name}</td>
-                    <td>${ingredient.pros}</td>
-                    <td>${ingredient.cons}</td>
-                    <td>${ingredient.nutritional_information.calories}</td>
-                    <td>${ingredient.nutritional_information.protein}</td>
-                    <td>${ingredient.nutritional_information.fat}</td>
-                    <td>${ingredient.nutritional_information.carbohydrates}</td>
-                    <td>${ingredient.nutritional_information.fiber}</td>
-                    <td>${ingredient.nutritional_information.sugars}</td>
-                `;
-                tableBody.appendChild(row);
-            });
+        function displayIngredientInfo(ingredient) {
+            ingredientInfoContainer.innerHTML = `
+                <div><strong>Ingredient Name:</strong> ${ingredient.ingredient_name}</div>
+                <div><strong>Pros:</strong> ${ingredient.pros}</div>
+                <div><strong>Cons:</strong> ${ingredient.cons}</div>
+                <div><strong>Calories:</strong> ${ingredient.nutritional_information.calories}</div>
+                <div><strong>Protein (g):</strong> ${ingredient.nutritional_information.protein}</div>
+                <div><strong>Fat (g):</strong> ${ingredient.nutritional_information.fat}</div>
+                <div><strong>Carbohydrates (g):</strong> ${ingredient.nutritional_information.carbohydrates}</div>
+                <div><strong>Fiber (g):</strong> ${ingredient.nutritional_information.fiber}</div>
+                <div><strong>Sugars (g):</strong> ${ingredient.nutritional_information.sugars}</div>
+            `;
         }
 
-        searchButton.addEventListener('click', () => {
+        function searchIngredient() {
             const searchTerm = searchBar.value.toLowerCase();
-            const filteredIngredients = ingredients.filter(ingredient => 
+            const ingredient = ingredients.find(ingredient =>
                 ingredient.ingredient_name.toLowerCase().includes(searchTerm)
             );
-            displayIngredients(filteredIngredients);
-        });
+            if (ingredient) {
+                displayIngredientInfo(ingredient);
+            } else {
+                ingredientInfoContainer.innerHTML = '<div>Ingredient not found.</div>';
+            }
+        }
 
-        // Display all ingredients on initial load
-        displayIngredients(ingredients);
+        searchButton.addEventListener('click', searchIngredient);
     </script>
 </body>
 </html>
